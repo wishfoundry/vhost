@@ -24,8 +24,12 @@ vhost config
 Currently, this is an interactive tool. Future support for explicit flags may be added if requested.
 
 TODO:
-1. detect nginx config dir on systems other than ubuntu
+1. detect nginx config dir on systems other than ubuntu 
+
 2. finish site templates set
+
 3. better permissions system
+
 4. CLI config options
 
+5. 
