@@ -1,0 +1,12 @@
+server {
+    listen       80;
+    server_name  timswildlife.dev timswildlife.local;
+    #change this path to where you have your wordpress instalation
+    root   /Users/bngreer/Sites/timswildlife.com/;
+    index index.php;
+    
+    access_log  /Applications/MNPP/logs/nginx/timswilfelife.access.log;
+    error_log  /Applications/MNPP/logs/nginx/timswildlife.error.log;
+
+    include /Applications/MNPP/conf/nginx/common/wordpress; 
+ }

@@ -1,0 +1,40 @@
+location / {
+  index  index.php index.html;
+  
+  index index.php index.html index.htm;
+  if (-f $request_filename) {
+  break;
+  }
+  if (-d $request_filename) {
+  break;
+  }
+  rewrite ^(.+)$ /index.php?q=$1 last;
+
+}
+
+# Static files.
+# Set expire headers, Turn off access log
+location ~* \favicon.ico$ {
+  access_log off;
+  expires 1d;
+  add_header Cache-Control public;
+}
+
+location ~ ^/(img|cjs|ccss)/ {
+  access_log off;
+  expires 7d;
+  add_header Cache-Control public;
+}
+
+# Deny access to .htaccess files,
+# git & svn repositories, etc
+location ~ /(\.ht|\.git|\.svn) {
+  deny  all;
+}
+
+location ~ .php?$ {
+  include /Applications/MNPP/conf/nginx/fastcgi.conf;
+  fastcgi_pass 127.0.0.1:9000;
+  fastcgi_index index.php;
+  fastcgi_param SCRIPT_FILENAME /Applications/MNPP/htdocs/playvc_api/webroot/$fastcgi_script_name;
+}

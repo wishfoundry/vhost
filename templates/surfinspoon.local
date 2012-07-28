@@ -1,0 +1,12 @@
+server {
+    listen       80;
+    server_name  surfinspoon.local;
+    #change this path to where you have your wordpress instalation
+    root   /Applications/MNPP/htdocs/surfinspoon;
+    index index.php;
+    
+    access_log  /Applications/MNPP/logs/nginx/surfinspoon.access.log;
+    error_log  /Applications/MNPP/logs/nginx/surfinspoon.error.log;
+
+    include /Applications/MNPP/conf/nginx/common/wordpress; 
+ }

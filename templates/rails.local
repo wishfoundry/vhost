@@ -1,0 +1,18 @@
+upstream thin {
+    server unix:/var/www/vhosts/site2.com/httpdocs/current/tmp/sockets/thin.0.sock;
+}
+server {
+    listen       80;
+    server_name  site2.com;
+
+    access_log  off;
+    error_log off;
+
+    location / {
+        proxy_pass         http://thin;
+    }
+
+    include /Applications/MNPP/conf/nginx/common/wordpress; 
+ }
+}
+

@@ -1,0 +1,7 @@
+Adding new sites to Nginx
+
+
+Add the hosts file in /Applications/MNPP/conf/nginx/sites-available
+Symlink that to /Applications/MNPP/conf/nginx/sites-enabled
+Be sure to add the intended local URL to /etc/hosts by where MNPP inserted its other URLs
+Restart services
