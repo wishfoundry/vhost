@@ -1,4 +1,0 @@
-vhost
-=====
-
-nginx vhost managment
