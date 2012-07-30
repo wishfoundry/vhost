@@ -8,7 +8,7 @@
   "devDependencies": {
     "cli-easy": "0.1.0",
     "vows": "0.6.1",
-    "prompt": "git://github.com/flatiron/prompt.git",
+    "prompt": "0.2.3",
     "jinjs": ">=0.3.6",
     "swig": "0.12.0"
   },
