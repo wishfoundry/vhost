@@ -16,8 +16,11 @@ app.use(flatiron.plugins.cli, {
 var commands             = require('./lib/commands')
 commands.config          = {};
 commands.config.tmpldir  = './templates/';
-commands.config.nginxdir = '/Users/bngreer/Sites/etc/nginx';
-commands.config.wwwdir   = '/Users/bngreer/Sites/var/www';
+// Mac MNPP
+//commands.config.nginxdir = '/Applications/MNPP/conf/nginx';
+//commands.config.wwwdir   = '/Users/bngreer/Sites/';
+commands.config.nginxdir = '/etc/nginx';
+commands.config.wwwdir   = '/var/www';
 
 
 app.cmd('create', commands.create);
