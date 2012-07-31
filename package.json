@@ -1,6 +1,6 @@
 {
   "description": "a utility for managing vhosts in nginx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "flatiron": "0.2.5"
