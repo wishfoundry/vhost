@@ -3,21 +3,31 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "flatiron": "0.2.5"
-  },
-  "devDependencies": {
+    "flatiron": "0.2.5",
     "cli-easy": "0.1.0",
     "vows": "0.6.1",
-    "prompt": "0.2.3",
+    "prompt": ">=0.2.2",
     "jinjs": ">=0.3.6",
     "swig": "0.12.0"
+  },
+  "devDependencies": {
   },
   "scripts": {
     "test": "vows --spec",
     "start": "node app.js"
   },
   "name": "vhost",
-  "author": "Ben Greer",
+  "author": {
+    "name": "Ben Greer"
+  },
   "homepage": "wishfoundry.com",
-  "bin": { "vhost": "app.js" }
+  "bin": {
+    "vhost": "app.js"
+  },
+  "readme": "vhost\n=====\n\nnginx vhost managment\n\nWARNING:\nThis tool is in alpha stage, use at your own risk.\n\nTo install:\n```bash\nnpm install -g https://github.com/wishfoundry/vhost.git\n```\n\nexample usage:\n```bash\nvhost list\nvhost create\nvhost enable\nvhost disable\nvhost delete\nvhost config\n```\n\nCurrently, this is an interactive tool. Future support for explicit flags may be added if requested.\n\nTODO:\n1. detect nginx config dir on systems other than ubuntu \n\n2. finish site templates set\n\n3. better permissions system\n\n4. CLI config options\n\n5. \n",
+  "_id": "vhost@0.1.1",
+  "dist": {
+    "shasum": "e9c61ec8318c2c7a9806b8a0bbd8607a74491c0d"
+  },
+  "_from": "."
 }
